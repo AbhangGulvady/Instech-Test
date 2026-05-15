@@ -40,12 +40,13 @@ In future, if this is going to be a large project, I would consider further orga
 
 Also plan to include APIVersioning, CQRS, dtos (if needed with more endpoints), multiple messaging systems in the future.
 
+
 Migrations
+
 Had to run below commands in powershell , also I moved existing migrations in migrations_old and created my new one.
 Running application in Rancher desktop.
-dotnet ef database update --context AuditContext
-dotnet ef migrations add Migration_AbhangTest --context AuditContext --output-dir Migrations
-dotnet ef migrations list --context AuditContext
+
+<img width="658" height="67" alt="image" src="https://github.com/user-attachments/assets/3d76c8cb-3a81-48ce-bdf7-4196d0ff53e9" />
 
 
 Task 2. 
@@ -69,6 +70,5 @@ Implemented Feature Flag to have AzureMessageBus as an option for the message bu
 or use InMemoryAuditMessageBus based on the configuration, by default we use InMemoryAuditMessageBus.
 
 Task 5. 
-Implemented IPremiumCalculator interface 
-with a simple PremiumCalculator implementation (ComputePremium) 
+Implemented IPremiumCalculator interface with a simple PremiumCalculator implementation (ComputePremium) 
 that calculates the premium based on the claim amount and coverage type accessing it as endpoint in the API.
