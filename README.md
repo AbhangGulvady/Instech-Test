@@ -11,15 +11,16 @@ Currently used a tuple for dbconnections but may consider using a more structure
 of creating a class/list to hold series of database connection information in a collection 
 in the future for better clarity and maintainability.
 
-
 IServiceCollection Extensions:
-- AddControllerswithJsonOptions: 
-- This extension method configures the controllers to use JSON options, 
-	- such as setting the property naming policy to camel case and ignoring null values during serialization.
-Have seperate extension methods for adding all AddScopedServices and AddSingletonServices to keep the Program.cs clean and organized.
-In case, there are more , add them in extensions for better separation of concerns and maintainability.
-WebApplication Extensions: MigrateAuditContext: 
+- AddControllerswithJsonOptions: This extension method configures the controllers to use JSON options, 
+	such as setting the property naming policy to camel case and ignoring null values during serialization.
 
+- Have seperate extension methods for adding all AddScopedServices and AddSingletonServices to keep the Program.cs clean and organized.
+In case, there are more , add them in extensions for better separation of concerns and maintainability.
+
+- AddAuditMessaging for checking for feature flag value and implementation based on Inmemory or use Azure Service Bus.
+
+- WebApplication Extensions: MigrateAuditContext: 
 Have seperate folders for Extensions, Services and Repositories with interface abstraction 
 to keep the project organized and maintainable.
 
@@ -72,3 +73,4 @@ or use InMemoryAuditMessageBus based on the configuration, by default we use InM
 Task 5. 
 Implemented IPremiumCalculator interface with a simple PremiumCalculator implementation (ComputePremium) 
 that calculates the premium based on the claim amount and coverage type accessing it as endpoint in the API.
+
