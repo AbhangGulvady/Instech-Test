@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Claims.Controllers
 {
-    /// <summary>
-    /// HTTP endpoints for managing insurance <see cref="Claim"/> resources.
-    /// </summary>
+
     [ApiController]
     [Route("[controller]")]
     public class ClaimsController : ControllerBase
