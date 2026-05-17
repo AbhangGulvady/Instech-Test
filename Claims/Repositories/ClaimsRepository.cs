@@ -28,14 +28,12 @@ namespace Claims.Repositories
                 .SingleOrDefaultAsync();
         }
 
-        /// <inheritdoc />
         public async Task AddAsync(Claim claim)
         {
             _context.Claims.Add(claim);
             await _context.SaveChangesAsync();
         }
 
-        /// <inheritdoc />
         public async Task DeleteAsync(string id)
         {
             var claim = await GetByIdAsync(id);
